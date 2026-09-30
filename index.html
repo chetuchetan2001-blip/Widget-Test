@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DX.ONE Support Testportal</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+.hero{
+    background:linear-gradient(135deg,#003366,#0055aa);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#0055aa;
+    margin-bottom:15px;
+}
+
+.status{
+    margin-top:50px;
+    background:#e8f5e9;
+    border-left:6px solid green;
+    padding:25px;
+    border-radius:8px;
+}
+
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <h1>DX.ONE Support Portal</h1>
+
+    <p>
+        Testumgebung zur Validierung des Atlassian
+        Customer Service Management Widgets.
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>✅ Widget Test</h3>
+            <p>
+                Überprüfung, ob das Widget korrekt geladen wird.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✅ Authentifizierung</h3>
+            <p>
+                Validierung der Token-Authentifizierung.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✅ Chat Funktion</h3>
+            <p>
+                Test der Ticket- und Chat-Funktionalität.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✅ Browser Kompatibilität</h3>
+            <p>
+                Prüfung in Chrome, Edge und Firefox.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="status">
+
+        <h2>Widget Status</h2>
+
+        <p>
+            Nach erfolgreichem Laden erscheint das Support Widget
+            unten rechts auf der Seite.
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+© 2026 DX.ONE – Widget Testumgebung
+</footer>
+
+<!-- Widget Konfiguration -->
+
+<script>
+
+window.csmWidgetSettings = {
+    widgetId: "88b59045-cd77-4b44-b631-ddadff102726",
+    site: "dxone.atlassian.net",
+    cloudId: "78662838-0caa-4374-91dc-78cf32fc6dfd"
+};
+
+</script>
+
+<script>
+
+(function(){
+
+if(typeof window.CSM==="undefined"){
+
+    var CSM=function(){
+        CSM.__q__.push(arguments);
+    };
+
+    CSM.__q__=[];
+
+    window.CSM=CSM;
+
+    var s=document.createElement("script");
+
+    s.async=true;
+
+    s.src=
+    "https://dxone.atlassian.net/csm/widget/script.js" +
+    "?widgetId=88b59045-cd77-4b44-b631-ddadff102726" +
+    "&site=dxone.atlassian.net" +
+    "&cloudId=78662838-0caa-4374-91dc-78cf32fc6dfd";
+
+    document.body.appendChild(s);
+
+}
+
+})();
+
+</script>
+
+</body>
+</html>
